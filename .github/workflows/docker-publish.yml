@@ -3,6 +3,8 @@ name: Publish
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: '55 3 * * 2'
   workflow_dispatch:
 
 permissions:
@@ -48,4 +50,3 @@ jobs:
           sbom: true
       - name: Verify exports
         run: docker run --rm ghcr.io/containerpak/kitty:main sh -c 'test -x /usr/bin/kitty && test -f /usr/share/applications/kitty.desktop'
-
