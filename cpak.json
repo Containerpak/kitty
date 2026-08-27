@@ -1,26 +1,29 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Containerpak/cpak/v2/schema/manifest-v2.json",
-  "manifest_version": "2.0",
+  "$schema": "https://raw.githubusercontent.com/Containerpak/cpak/v2/schema/manifest-v3.json",
+  "manifest_version": "3.0",
   "name": "Kitty",
   "description": "A GPU-accelerated terminal emulator with tabs and layouts.",
   "version": "0.45.0",
-  "image": "ghcr.io/containerpak/kitty:main",
-  "binaries": ["/usr/bin/kitty", "/usr/bin/kitten"],
-  "desktop_entries": ["/usr/share/applications/kitty.desktop"],
+  "image": "ghcr.io/containerpak/kitty@sha256:8fb7092b9074bbc47e973790960cec9021cc896a31f3371465d03b2b46abd231",
+  "binaries": [
+    "/usr/bin/kitty",
+    "/usr/bin/kitten"
+  ],
+  "desktop_entries": [
+    "/usr/share/applications/kitty.desktop"
+  ],
   "dependencies": [],
-  "addons": ["github.com/containerpak/sdk-go", "github.com/containerpak/sdk-node-lts"],
+  "addons": [
+    "github.com/containerpak/sdk-go",
+    "github.com/containerpak/sdk-node-lts"
+  ],
   "idle_time": 0,
   "override": {
-    "socketX11": true,
     "socketWayland": true,
     "socketPulseAudio": false,
-    "socketSessionBus": true,
-    "socketSystemBus": false,
     "socketSshAgent": true,
     "socketCups": false,
     "socketGpgAgent": true,
-    "socketAtSpiBus": true,
-    "socketBluetooth": false,
     "deviceDri": true,
     "deviceKvm": false,
     "deviceShm": false,
@@ -32,7 +35,12 @@
     "deviceAll": false,
     "notification": true,
     "openURI": true,
-    "filesystem": [{"path": "home", "access": "read-write"}],
+    "filesystem": [
+      {
+        "path": "home",
+        "access": "read-write"
+      }
+    ],
     "env": [],
     "network": true,
     "process": false,
@@ -40,7 +48,6 @@
     "memoryMaxMB": 0,
     "cpuQuota": 0,
     "pidsMax": 0,
-    "asRoot": false,
-    "allowedHostCommands": ["xdg-open"]
+    "asRoot": false
   }
 }
