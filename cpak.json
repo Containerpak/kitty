@@ -4,7 +4,7 @@
   "name": "Kitty",
   "description": "A GPU-accelerated terminal emulator with tabs and layouts.",
   "version": "0.45.0",
-  "image": "ghcr.io/containerpak/kitty@sha256:f5b24cff5f1d6cc90e4459caafb1a02ea3b012b12f5f7aa9eaf4b9616817f2d9",
+  "image": "ghcr.io/containerpak/kitty@sha256:3ce9ffa18a1f93b494935dd3445ee094eafa37c83dafbe310b0fab63510a7196",
   "binaries": [
     "/usr/bin/kitty",
     "/usr/bin/kitten"
